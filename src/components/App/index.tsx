@@ -3,6 +3,7 @@ import { useSelector, useDispatch } from 'react-redux';
 
 import { getNumber } from './selectors';
 import { incrementSaga, decrementSaga } from './actionCreators';
+import Todos from '../Todos';
 
 const App: React.FC = () => {
   const dispatch = useDispatch();
@@ -21,6 +22,8 @@ const App: React.FC = () => {
       <h1>{number}</h1>
       <button onClick={handleDecrementClick}>-1</button>
       <button onClick={handleIncrementClick}>+1</button>
+
+      <Todos />
     </>
   );
 }
